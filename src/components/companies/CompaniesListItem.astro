@@ -1,0 +1,8 @@
+---
+const {startYear, endYear, company, jobPosition, description} = Astro.props;
+---
+	<p class="text-sm">{startYear} - {endYear}</p>
+	<h2><strong>{company}</strong> - <u>{jobPosition}</u></h2>
+	<p>
+		{description}
+	</p>

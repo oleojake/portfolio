@@ -1,0 +1,27 @@
+---
+import CertificationTableItem from "./CertificationTableItem.astro";
+import {certifications} from "../../config.ts"
+---
+
+<div class="overflow-x-auto">
+	<div class="mx-auto max-w-3xl">
+		<table class="table table-xs">
+			<thead>
+				<tr class="border-oleojake-primary">
+					<th class="text-oleojake-primary">...more</th>
+				</tr>
+			</thead>
+			<tbody>
+				{
+					certifications.map((certification) => (
+						<CertificationTableItem
+							title={certification.title}
+							school={certification.school}
+							year={certification.year}
+						/>
+					))
+				}
+			</tbody>
+		</table>
+	</div>
+</div>

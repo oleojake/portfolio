@@ -5,11 +5,11 @@ import { Config } from "../config";
 import TimeLine from "../components/TimeLine.astro";
 import ToolBox from "../components/ToolBox.astro";
 import Title from "../components/Title.astro";
-import CertificationTable from "../components/CertificationTable.astro";
+import CertificationTable from "../components/certification-table/CertificationTableGrid.astro";
 import EventAppearances from "../components/EventAppearances.astro";
-import Companies from "../components/Companies.astro";
+import CompaniesList from "../components/companies/CompaniesList.astro";
 import Footer from "../components/Footer.astro";
-import { tools, titles } from "../constants";
+import { tools, titles } from "../config.ts";
 
 /*
 import { getCollection } from "astro:content";
@@ -107,7 +107,7 @@ const posts = (await getCollection("posts")).sort(function (
 					<TimeLine />
 				</section>
 				<section class="flex flex-col gap-8">
-					<Companies />
+					<CompaniesList />
 				</section>
 			</article>
 			<article class="flex flex-col gap-8">

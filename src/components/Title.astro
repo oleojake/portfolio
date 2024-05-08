@@ -25,12 +25,12 @@ const { title, src, id } = Astro.props;
 
 <div
 	onclick=`my_modal_${id}.showModal()`
-	class="card border cursor-pointer transition-all duration-300 hover:-translate-y-1"
+	class="card border border-oleojake-primary cursor-pointer transition-all duration-300 hover:-translate-y-1"
 >
 	<figure>
 		<img src=`/titles/${src}.jpg` alt={title} />
 	</figure>
-	<div class="border-t rounded-b-md">
+	<div class="border-t border-oleojake-primary rounded-b-md">
 		<h2 class="text-xs py-2 mx-auto text-center text-oleojake-primary">
 			{title}
 		</h2>
