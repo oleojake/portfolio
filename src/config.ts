@@ -144,7 +144,7 @@ export const jobs : Job[] = [
 		company: "Turronesydulces",
 		jobPosition: "Ecommerce Manager",
 		description:
-			"Management of an Ecommerce developed in Magento and the supervision of other sales channels like Amazon, WordPress or Shopify among others. SEO Strategies, Advertising Campaigns, Emailmarketing, Automations, CRM, Web Development, KPIS Analysis, Logistics Management, Social Networks, Customer Service and other tasks related to the daily maintenance of an online store.",
+			"Management of an Ecommerce developed in Magento and the supervision of other sales channels like Amazon, WordPress or Shopify among others. SEO Strategies, Advertising Campaigns, Emailmarketing, Automations, CRM Management, Web Development, KPIS Analysis, Logistics Management, Social Networks, Customer Service and other tasks related to the daily maintenance of an online store.",
 	},
   {
 		startYear: "2017",
@@ -152,7 +152,7 @@ export const jobs : Job[] = [
 		company: "Ecommaster.es School",
 		jobPosition: "Digital Marketing & Head of Studies",
 		description:
-			"Digital Marketing tasks: Lead Generation, SEO, Facebook Ads, Content Creation, CRM, Invoicing, CRM, and Events among others. Maintenance of the school's campus as well as the management of a community linked to digital marketing.",
+			"Digital Marketing tasks: Lead Generation, SEO, Facebook Ads, Content Creation, CRM, Invoicing, CRM Management, organization of online and in-person events among others. In addition, maintenance of the school's campus as well as the management of a community linked to digital marketing.",
 	},
   {
 		startYear: "2016",
@@ -160,6 +160,6 @@ export const jobs : Job[] = [
 		company: "Digital Latam",
 		jobPosition: "Frontend & Elearning Developer",
 		description:
-			"Creation of e-learning projects using HTML, CSS, JS and 2D character animation.",
+			"Development of e-learning platforms using HTML, CSS and JavaScript. Design of interactive videos using 2D animations",
 	},
 ];

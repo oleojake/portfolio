@@ -68,7 +68,7 @@ const posts = (await getCollection("posts")).sort(function (
 			</article>
 			<article class="flex flex-col gap-8">
 				<header class="flex w-full flex-row justify-between gap-2">
-					<h3 class="text-lg tracking-tighter font-semibold">Featured projects</h3>
+					<h3 class="text-lg tracking-tighter font-semibold">💻 Featured projects</h3>
 					<a
 						href={Config.me.projectLink}
 						class="text-sm underline decoration-dashed underline-offset-8 text-oleojake-secondary hover:text-oleojake-primary"
@@ -93,7 +93,7 @@ const posts = (await getCollection("posts")).sort(function (
 			</article>
 			<article class="flex flex-col gap-8">
 				<header class="flex w-full flex-row justify-between gap-2">
-					<h3 class="text-lg tracking-tighter font-semibold">Tools</h3>
+					<h3 class="text-lg tracking-tighter font-semibold">🛠️ Tools</h3>
 				</header>
 				<section class="pt-1 flex flex-row flex-wrap gap-2 justify-center">
 					{tools.map((tool) => <ToolBox title={tool.title} icon={tool.icon} />)}
@@ -101,7 +101,7 @@ const posts = (await getCollection("posts")).sort(function (
 			</article>
 			<article class="flex flex-col gap-8">
 				<header class="flex w-full flex-row justify-between gap-2">
-					<h3 class="text-lg tracking-tighter font-semibold">My path</h3>
+					<h3 class="text-lg tracking-tighter font-semibold">📍 My path</h3>
 				</header>
 				<section>
 					<TimeLine />
@@ -112,7 +112,7 @@ const posts = (await getCollection("posts")).sort(function (
 			</article>
 			<article class="flex flex-col gap-8">
 				<header class="flex w-full flex-row justify-between gap-2">
-					<h3 class="text-lg tracking-tighter font-semibold">Certificates</h3>
+					<h3 class="text-lg tracking-tighter font-semibold">🎓 Certificates</h3>
 				</header>
 				<section class="grid grid-cols-2 gap-4 sm:grid sm:grid-cols-4">
 					{
@@ -125,8 +125,7 @@ const posts = (await getCollection("posts")).sort(function (
 			</article>
 			<article class="flex flex-col gap-8">
 				<header class="flex w-full flex-row justify-between gap-2">
-					<h3 class="text-lg tracking-tighter font-semibold">
-						Teaching & Event appearances
+					<h3 class="text-lg tracking-tighter font-semibold">📢 Teaching & Event appearances
 					</h3>
 				</header>
 				<EventAppearances />
