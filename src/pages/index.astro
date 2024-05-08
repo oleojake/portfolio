@@ -1,0 +1,166 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FloatingBox from "../components/SmallBox.astro";
+import { Config } from "../config";
+import TimeLine from "../components/TimeLine.astro";
+import ToolBox from "../components/ToolBox.astro";
+import Title from "../components/Title.astro";
+import CertificationTable from "../components/CertificationTable.astro";
+import EventAppearances from "../components/EventAppearances.astro";
+import Companies from "../components/Companies.astro";
+import Footer from "../components/Footer.astro";
+import { tools, titles } from "../constants";
+
+/*
+import { getCollection } from "astro:content";
+const posts = (await getCollection("posts")).sort(function (
+  first: any,
+  second: any
+) {
+  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
+});*/
+---
+
+<Layout>
+	<main>
+		<div class="flex flex-col gap-8 sm:gap-24">
+			<article class="md:flex-row-reverse md:justify-end md:gap-12">
+				<div class="flex flex-col justify-between sm:grid-cols-3 sm:grid">
+					<div class="col-span-2 flex flex-col gap-6 md:gap-8 my-auto">
+						<h1 class="text-3xl text-oleojake-primary">
+							Hi, I’m {Config.me.name.split(" ")[0]} Marzal
+						</h1>
+						<h2 class="w-auto sm:w-[85%] md:w-[90%] leading-6">
+							I am a <strong class="font-bold text-oleojake-secondary"
+								>{Config.me.job}</strong
+							> currently working in <strong class="font-bold text-oleojake-secondary"
+								>frontend</strong
+							> development. I also have a background in <strong
+								class="font-bold text-oleojake-secondary">e-commerce</strong
+							> and digital marketing.
+						</h2>
+						<div class="custom-breadcrumbs">
+							<ul>
+								{
+									Object.keys(Config.socials).map((social) => (
+										<li>
+											<a
+												href={Config.socials[social as keyof typeof Config.socials]}
+												rel="noreferrer"
+												target="_blank"
+											>
+												{social.charAt(0).toUpperCase() + social.slice(1)}
+											</a>
+										</li>
+									))
+								}
+							</ul>
+						</div>
+					</div>
+					<div class="text-center mt-8 sm:ml-auto sm:m-0 sm:block">
+						<div class="avatar">
+							<div class="w-60 rounded-full">
+								<img src="/profile-picture.jpg" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="flex flex-col gap-8">
+				<header class="flex w-full flex-row justify-between gap-2">
+					<h3 class="text-lg tracking-tighter font-semibold">Featured projects</h3>
+					<a
+						href={Config.me.projectLink}
+						class="text-sm underline decoration-dashed underline-offset-8 text-oleojake-secondary hover:text-oleojake-primary"
+						target="_blank"
+						rel="noreferrer"
+						>See all projects
+					</a>
+				</header>
+				<section
+					class="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-center items-stretch"
+				>
+					{
+						Object.keys(Config.projects).map((project) => (
+							<FloatingBox
+								title={project}
+								href={Config.projects[project as keyof typeof Config.projects].url}
+								tags={Config.projects[project as keyof typeof Config.projects].tags}
+							/>
+						))
+					}
+				</section>
+			</article>
+			<article class="flex flex-col gap-8">
+				<header class="flex w-full flex-row justify-between gap-2">
+					<h3 class="text-lg tracking-tighter font-semibold">Tools</h3>
+				</header>
+				<section class="pt-1 flex flex-row flex-wrap gap-2 justify-center">
+					{tools.map((tool) => <ToolBox title={tool.title} icon={tool.icon} />)}
+				</section>
+			</article>
+			<article class="flex flex-col gap-8">
+				<header class="flex w-full flex-row justify-between gap-2">
+					<h3 class="text-lg tracking-tighter font-semibold">My path</h3>
+				</header>
+				<section>
+					<TimeLine />
+				</section>
+				<section class="flex flex-col gap-8">
+					<Companies />
+				</section>
+			</article>
+			<article class="flex flex-col gap-8">
+				<header class="flex w-full flex-row justify-between gap-2">
+					<h3 class="text-lg tracking-tighter font-semibold">Certificates</h3>
+				</header>
+				<section class="grid grid-cols-2 gap-4 sm:grid sm:grid-cols-4">
+					{
+						titles.map((title, index) => (
+							<Title title={title.title} src={title.src} id={index} />
+						))
+					}
+				</section>
+				<CertificationTable />
+			</article>
+			<article class="flex flex-col gap-8">
+				<header class="flex w-full flex-row justify-between gap-2">
+					<h3 class="text-lg tracking-tighter font-semibold">
+						Teaching & Event appearances
+					</h3>
+				</header>
+				<EventAppearances />
+			</article>
+			<!-- 
+      <article class="flex flex-col gap-8">
+        <header class="flex w-full flex-row justify-between gap-2">
+          <h3 class="text-lg">Latest posts</h3>
+          <a
+            href="/posts"
+            class="text-sm text-primary underline decoration-dashed underline-offset-8"
+            rel="noreferrer"
+            >See all posts
+          </a>
+        </header>
+        <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 mx-auto">
+          {
+            posts.map((post: any) => (
+              <FloatingBox
+                title={post.data.title}
+                publishedAt={post.data.publishedAt.toLocaleDateString("en-us", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+                description={post.data.description}
+                href={"/posts/" + post.slug}
+              />
+            ))
+          }
+        </section>
+      </article>
+      -->
+		</div>
+	</main>
+	<Footer />
+</Layout>

@@ -1,0 +1,10 @@
+---
+const { title, icon } = Astro.props;
+---
+
+<div
+	class="badge badge-lg p-4 badge-success transition-all duration-300 hover:scale-105"
+>
+	<Fragment set:html={icon} />
+	<p class="ml-1">{title}</p>
+</div>
