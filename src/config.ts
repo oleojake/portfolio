@@ -48,6 +48,8 @@ import tailwindSVG from "../public/icons/tailwind.svg?raw";
 import wordpressSVG from "../public/icons/wordpress.svg?raw";
 import githubSVG from "../public/icons/github.svg?raw";
 import figmaSVG from "../public/icons/figma.svg?raw";
+import sassSVG from "../public/icons/sass.svg?raw";
+import bootstrapSVG from "../public/icons/bootstrap.svg?raw";
 
 interface Tool {
 	title: string;
@@ -63,9 +65,12 @@ export const tools: Tool[] = [
 	{ title: "Git", icon: gitSVG },
 	{ title: "Astro", icon: astroSVG },
 	{ title: "Tailwind", icon: tailwindSVG },
+	{ title: "Sass", icon: sassSVG },
+	{ title: "Bootstrap", icon: bootstrapSVG },
 	{ title: "WordPress", icon: wordpressSVG },
 	{ title: "GitHub", icon: githubSVG },
 	{ title: "Figma", icon: figmaSVG },
+	
 ];
 
 interface Title {
