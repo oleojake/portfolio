@@ -97,9 +97,11 @@ interface Certifications {
 export const certifications : Certifications[]= [
 	{
 		title: "Bootcamp JavaScript & TypeScript",
-		school: "lemoncode",
+		school: "Lemoncode",
 		year: "2024",
 	},
+	{ title: "HTML5 & CSS Course", school: "Open Bootcamp", year: "2024" },
+	{ title: "JavaScript & JQuery Course", school: "Open Bootcamp", year: "2024" },
 	{ title: "JavaScript Course", school: "aprendejavascript.dev", year: "2024" },
 	{ title: "Git & GitHub Course", school: "/mouredev/hello-git", year: "2024" },
 	{
