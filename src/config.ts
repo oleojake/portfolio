@@ -34,6 +34,10 @@ export const Config: IConfig = {
 			url: "https://github.com/oleojake/Classic-Pokedex",
 			tags: ["astro", "tailwind", "api"],
 		},
+		"weatherWhiz": {
+			url: "https://github.com/oleojake/weather-app",
+			tags: ["react", "mui"],
+		},
 	},
 };
 
@@ -50,6 +54,7 @@ import githubSVG from "../public/icons/github.svg?raw";
 import figmaSVG from "../public/icons/figma.svg?raw";
 import sassSVG from "../public/icons/sass.svg?raw";
 import bootstrapSVG from "../public/icons/bootstrap.svg?raw";
+import muiSVG from "../public/icons/mui.svg?raw";
 
 interface Tool {
 	title: string;
@@ -70,7 +75,7 @@ export const tools: Tool[] = [
 	{ title: "WordPress", icon: wordpressSVG },
 	{ title: "GitHub", icon: githubSVG },
 	{ title: "Figma", icon: figmaSVG },
-	
+	{ title: "MUI", icon: muiSVG },
 ];
 
 interface Title {
