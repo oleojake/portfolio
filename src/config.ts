@@ -26,17 +26,21 @@ export const Config: IConfig = {
 		github: "https://github.com/oleojake",
 	},
 	projects: {
-		"React tic-tae-toe vs AI": {
-			url: "https://github.com/oleojake/React-TicTaeToe-AI",
-			tags: ["react", "ai", "chagtp"],
+		"React (POS) Point Of Sale": {
+			url: "https://react-tpv.netlify.app/",
+			tags: ["react", "mui", "typescript"],
 		},
 		"Classic Pokédex": {
 			url: "https://github.com/oleojake/Classic-Pokedex",
 			tags: ["astro", "tailwind", "api"],
 		},
+		"React tic-tae-toe vs AI": {
+			url: "https://github.com/oleojake/React-TicTaeToe-AI",
+			tags: ["react", "ai", "chagtp"],
+		},
 		"weatherWhiz": {
 			url: "https://github.com/oleojake/weather-app",
-			tags: ["react", "mui"],
+			tags: ["react", "mui", "typescript"],
 		},
 	},
 };
