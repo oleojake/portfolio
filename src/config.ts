@@ -27,7 +27,7 @@ export const Config: IConfig = {
 	},
 	projects: {
 		"React (POS) Point Of Sale": {
-			url: "https://react-tpv.netlify.app/",
+			url: "https://github.com/oleojake/tpv-react",
 			tags: ["react", "mui", "typescript"],
 		},
 		"Classic Pokédex": {
