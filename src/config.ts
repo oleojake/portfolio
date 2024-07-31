@@ -34,6 +34,10 @@ export const Config: IConfig = {
 			url: "https://github.com/oleojake/Classic-Pokedex",
 			tags: ["astro", "tailwind", "api"],
 		},
+		"FindMyGitHubId": {
+			url: "https://github.com/oleojake/github-member-id",
+			tags: ["react", "tailwind", "api"],
+		},
 		"React tic-tae-toe vs AI": {
 			url: "https://github.com/oleojake/React-TicTaeToe-AI",
 			tags: ["react", "ai", "chagtp"],
@@ -87,7 +91,7 @@ interface Title {
 	src: string;
 }
 
-export const titles : Title[]= [
+export const titles: Title[] = [
 	{
 		title: "Multimedia Engineering Degree",
 		src: "multimedia-engineering-degree",
@@ -103,7 +107,7 @@ interface Certifications {
 	year: string;
 }
 
-export const certifications : Certifications[]= [
+export const certifications: Certifications[] = [
 	{
 		title: "Bootcamp JavaScript & TypeScript",
 		school: "Lemoncode",
@@ -153,7 +157,7 @@ interface Job {
 	description: string;
 }
 
-export const jobs : Job[] = [
+export const jobs: Job[] = [
 	{
 		startYear: "2016",
 		endYear: "2024",
@@ -162,7 +166,7 @@ export const jobs : Job[] = [
 		description:
 			"Management of an Ecommerce developed in Magento and the supervision of other sales channels like Amazon, WordPress or Shopify among others. SEO Strategies, Advertising Campaigns, Emailmarketing, Automations, CRM Management, Web Development, KPIS Analysis, Logistics Management, Social Networks, Customer Service and other tasks related to the daily maintenance of an online store.",
 	},
-  {
+	{
 		startYear: "2017",
 		endYear: "2024",
 		company: "Ecommaster.es School",
@@ -170,7 +174,7 @@ export const jobs : Job[] = [
 		description:
 			"Digital Marketing tasks: Lead Generation, SEO, Facebook Ads, Content Creation, CRM, Invoicing, CRM Management, organization of online and in-person events among others. In addition, maintenance of the school's campus as well as the management of a community linked to digital marketing.",
 	},
-  {
+	{
 		startYear: "2016",
 		endYear: "2016",
 		company: "Digital Latam",
