@@ -26,17 +26,21 @@ export const Config: IConfig = {
 		github: "https://github.com/oleojake",
 	},
 	projects: {
+		"QuickMock": {
+			url: "https://github.com/Lemoncode/quickmock/tree/main",
+			tags: ["react", "konva.js", "typescript"],
+		},
 		"React (POS) Point Of Sale": {
 			url: "https://github.com/oleojake/tpv-react",
 			tags: ["react", "mui", "typescript"],
 		},
-		"Classic Pokédex": {
-			url: "https://github.com/oleojake/Classic-Pokedex",
-			tags: ["astro", "tailwind", "api"],
-		},
 		"FindMyGitHubId": {
 			url: "https://github.com/oleojake/github-member-id",
 			tags: ["react", "tailwind", "api"],
+		},
+		"Classic Pokédex": {
+			url: "https://github.com/oleojake/Classic-Pokedex",
+			tags: ["astro", "tailwind", "api"],
 		},
 		"React tic-tae-toe vs AI": {
 			url: "https://github.com/oleojake/React-TicTaeToe-AI",
