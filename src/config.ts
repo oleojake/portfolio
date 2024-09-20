@@ -163,6 +163,14 @@ interface Job {
 
 export const jobs: Job[] = [
 	{
+		startYear: "2024",
+		endYear: "Present",
+		company: "Quickmock",
+		jobPosition: "Frontend Developer",
+		description:
+			"As a Frontend Developer, I contributed to an open-source wireframing tool built with TypeScript, React, and Konvajs, enabling users to quickly create basic wireframes with interactive and scalable UI elements. I collaborated with cross-functional teams in an agile environment.",
+	},
+	{
 		startYear: "2016",
 		endYear: "2024",
 		company: "Turronesydulces",

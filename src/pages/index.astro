@@ -31,7 +31,7 @@ const posts = (await getCollection("posts")).sort(function (
 							Hi, I’m {Config.me.name.split(" ")[0]} Marzal
 						</h1>
 						<h2 class="w-auto sm:w-[85%] md:w-[90%] leading-6">
-							I am a <strong class="font-bold text-oleojake-secondary"
+							A <strong class="font-bold text-oleojake-secondary"
 								>{Config.me.job}</strong
 							> currently working in <strong class="font-bold text-oleojake-secondary"
 								>frontend</strong
@@ -55,7 +55,9 @@ const posts = (await getCollection("posts")).sort(function (
 									))
 								}
 								<li>
-									<a href="/Pablo_Marzal_CV.pdf" download="Pablo_Marzal_CV.pdf"> Download CV</a>
+									<a href="/Pablo_Marzal_CV.pdf" download="Pablo_Marzal_CV.pdf">
+										Download CV</a
+									>
 								</li>
 							</ul>
 						</div>
@@ -63,7 +65,11 @@ const posts = (await getCollection("posts")).sort(function (
 					<div class="text-center mt-8 sm:ml-auto sm:m-0 sm:block">
 						<div class="avatar">
 							<div class="w-60 rounded-full">
-								<img src="/profile-picture.webp" alt="Pablo Marzal" title="Pablo Marzal Profile Picture"/>
+								<img
+									src="/profile-picture.webp"
+									alt="Pablo Marzal"
+									title="Pablo Marzal Profile Picture"
+								/>
 							</div>
 						</div>
 					</div>
@@ -71,7 +77,9 @@ const posts = (await getCollection("posts")).sort(function (
 			</article>
 			<article class="flex flex-col gap-8">
 				<header class="flex w-full flex-row justify-between gap-2">
-					<h3 class="text-lg tracking-tighter font-semibold">💻 Featured projects</h3>
+					<h3 class="text-lg tracking-tighter font-semibold">
+						💻 Featured projects
+					</h3>
 					<a
 						href={Config.me.projectLink}
 						class="text-sm underline decoration-dashed underline-offset-8 text-oleojake-secondary hover:text-oleojake-primary"
@@ -128,7 +136,8 @@ const posts = (await getCollection("posts")).sort(function (
 			</article>
 			<article class="flex flex-col gap-8">
 				<header class="flex w-full flex-row justify-between gap-2">
-					<h3 class="text-lg tracking-tighter font-semibold">📢 Teaching & Event appearances
+					<h3 class="text-lg tracking-tighter font-semibold">
+						📢 Teaching & Event appearances
 					</h3>
 				</header>
 				<EventAppearances />
