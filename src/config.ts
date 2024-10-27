@@ -38,18 +38,6 @@ export const Config: IConfig = {
 			url: "https://github.com/oleojake/github-member-id",
 			tags: ["react", "tailwind", "api"],
 		},
-		"Classic Pokédex": {
-			url: "https://github.com/oleojake/Classic-Pokedex",
-			tags: ["astro", "tailwind", "api"],
-		},
-		"React tic-tae-toe vs AI": {
-			url: "https://github.com/oleojake/React-TicTaeToe-AI",
-			tags: ["react", "ai", "chagtp"],
-		},
-		"weatherWhiz": {
-			url: "https://github.com/oleojake/weather-app",
-			tags: ["react", "mui", "typescript"],
-		},
 	},
 };
 
@@ -166,9 +154,25 @@ export const jobs: Job[] = [
 		startYear: "2024",
 		endYear: "Present",
 		company: "Quickmock",
-		jobPosition: "Frontend Developer",
+		jobPosition: "Front-End Developer",
 		description:
 			"As a Frontend Developer, I contributed to an open-source wireframing tool built with TypeScript, React, and Konvajs, enabling users to quickly create basic wireframes with interactive and scalable UI elements. I collaborated with cross-functional teams in an agile environment.",
+	},
+	{
+		startYear: "2023",
+		endYear: "2024",
+		company: "Ecommaster.es School",
+		jobPosition: "Front-End Developer",
+		description:
+			"Focused on the creation and optimization of websites and landing pages primarily using HTML, CSS, and JavaScript, along with tools like Bootstrap, Git, and SASS. Collaborated on web development solutions to support marketing initiatives and achieve the school’s goals.",
+	},
+	{
+		startYear: "2017",
+		endYear: "2023",
+		company: "Ecommaster.es School",
+		jobPosition: "Digital Marketing & Head of Studies",
+		description:
+			"Digital Marketing tasks: Lead Generation, SEO, Facebook Ads, Content Creation, CRM, Invoicing, CRM Management, organization of online and in-person events among others. In addition, maintenance of the school's campus as well as the management of a community linked to digital marketing.",
 	},
 	{
 		startYear: "2016",
@@ -177,14 +181,6 @@ export const jobs: Job[] = [
 		jobPosition: "Ecommerce Manager",
 		description:
 			"Management of an Ecommerce developed in Magento and the supervision of other sales channels like Amazon, WordPress or Shopify among others. SEO Strategies, Advertising Campaigns, Emailmarketing, Automations, CRM Management, Web Development, KPIS Analysis, Logistics Management, Social Networks, Customer Service and other tasks related to the daily maintenance of an online store.",
-	},
-	{
-		startYear: "2017",
-		endYear: "2024",
-		company: "Ecommaster.es School",
-		jobPosition: "Digital Marketing & Head of Studies",
-		description:
-			"Digital Marketing tasks: Lead Generation, SEO, Facebook Ads, Content Creation, CRM, Invoicing, CRM Management, organization of online and in-person events among others. In addition, maintenance of the school's campus as well as the management of a community linked to digital marketing.",
 	},
 	{
 		startYear: "2016",
