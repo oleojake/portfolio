@@ -11,14 +11,13 @@ import CompaniesList from "../components/companies/CompaniesList.astro";
 import Footer from "../components/Footer.astro";
 import { tools, titles } from "../config.ts";
 
-/*
 import { getCollection } from "astro:content";
 const posts = (await getCollection("posts")).sort(function (
-  first: any,
-  second: any
+	first: any,
+	second: any
 ) {
-  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
-});*/
+	return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
+});
 ---
 
 <Layout>
@@ -142,35 +141,33 @@ const posts = (await getCollection("posts")).sort(function (
 				</header>
 				<EventAppearances />
 			</article>
-			<!-- 
-      <article class="flex flex-col gap-8">
-        <header class="flex w-full flex-row justify-between gap-2">
-          <h3 class="text-lg">Latest posts</h3>
-          <a
-            href="/posts"
-            class="text-sm text-primary underline decoration-dashed underline-offset-8"
-            rel="noreferrer"
-            >See all posts
-          </a>
-        </header>
-        <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 mx-auto">
-          {
-            posts.map((post: any) => (
-              <FloatingBox
-                title={post.data.title}
-                publishedAt={post.data.publishedAt.toLocaleDateString("en-us", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
-                description={post.data.description}
-                href={"/posts/" + post.slug}
-              />
-            ))
-          }
-        </section>
-      </article>
-      -->
+
+			<article class="flex flex-col gap-8">
+				<header class="flex w-full flex-row justify-between gap-2">
+					<h3 class="text-lg">Latest posts</h3>
+					<a
+						href="/posts"
+						class="text-sm underline decoration-dashed underline-offset-8 text-oleojake-secondary hover:text-oleojake-primary"
+						>See all posts
+					</a>
+				</header>
+				<section class="grid grid-cols-1 gap-4 sm:grid-cols-2 mx-auto">
+					{
+						posts.map((post: any) => (
+							<FloatingBox
+								title={post.data.title}
+								publishedAt={post.data.publishedAt.toLocaleDateString("en-us", {
+									year: "numeric",
+									month: "short",
+									day: "numeric",
+								})}
+								description={post.data.description}
+								href={"/posts/" + post.slug}
+							/>
+						))
+					}
+				</section>
+			</article>
 		</div>
 	</main>
 	<Footer />

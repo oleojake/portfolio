@@ -45,21 +45,21 @@ const currentPath = Astro.url.pathname;
 				class="flex w-full flex-col gap-3 md:gap-2 md:flex-row md:justify-between pb-0 md:pb-4"
 			>
 				<a href="/" class="text-xl">{Config.me.name}</a>
-				<!-- <nav class="text-sm custom-breadcrumbs">
-          <ul>
-            <li>
-              <a class={currentPath === "/" ? "text-primary" : ""} href="/"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                class={currentPath.startsWith("/posts") ? "text-primary" : ""}
-                href="/posts">Posts</a
-              >
-            </li>
-          </ul>
-        </nav> -->
+				<nav class="text-sm custom-breadcrumbs">
+					<ul>
+						<li>
+							<a class={currentPath === "/" ? "text-oleojake-primary" : ""} href="/"
+								>Home</a
+							>
+						</li>
+						<li>
+							<a
+								class={currentPath.startsWith("/posts") ? "text-oleojake-primary" : ""}
+								href="/posts">Posts</a
+							>
+						</li>
+					</ul>
+				</nav>
 			</header>
 			<slot />
 		</div>
