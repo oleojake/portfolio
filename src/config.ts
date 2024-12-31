@@ -30,6 +30,10 @@ export const Config: IConfig = {
 			url: "https://github.com/Lemoncode/quickmock/tree/main",
 			tags: ["react", "konva.js", "typescript"],
 		},
+		"Basic Pod Architecture React Template": {
+			url: "https://github.com/oleojake/basic-pod-architecture-react-boiler-template",
+			tags: ["react", "architecture", "webpack"],
+		},
 		"React (POS) Point Of Sale": {
 			url: "https://github.com/oleojake/tpv-react",
 			tags: ["react", "mui", "typescript"],
