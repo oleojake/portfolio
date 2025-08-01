@@ -59,6 +59,8 @@ import figmaSVG from "../public/icons/figma.svg?raw";
 import sassSVG from "../public/icons/sass.svg?raw";
 import bootstrapSVG from "../public/icons/bootstrap.svg?raw";
 import muiSVG from "../public/icons/mui.svg?raw";
+import symfony from "../public/icons/symfony.svg?raw";
+import angular from "../public/icons/angular.svg?raw";
 
 interface Tool {
 	title: string;
@@ -73,6 +75,8 @@ export const tools: Tool[] = [
 	{ title: "React", icon: reactSVG },
 	{ title: "Git", icon: gitSVG },
 	{ title: "Astro", icon: astroSVG },
+	{ title: "Symfony", icon: symfony },
+	{ title: "Angular", icon: angular },
 	{ title: "Tailwind", icon: tailwindSVG },
 	{ title: "Sass", icon: sassSVG },
 	{ title: "Bootstrap", icon: bootstrapSVG },
@@ -155,8 +159,16 @@ interface Job {
 
 export const jobs: Job[] = [
 	{
-		startYear: "2024",
+		startYear: "2025",
 		endYear: "Present",
+		company: "Limenius",
+		jobPosition: "Front-End Developer",
+		description:
+			"As a Front-End Developer, I built modern web interfaces using React, working closely with the Symfony backend to integrate APIs and dynamic features. I focused on creating reusable components and enhancing the user experience across web and mobile applications.",
+	},
+	{
+		startYear: "2024",
+		endYear: "2025",
 		company: "Quickmock",
 		jobPosition: "Front-End Developer",
 		description:
