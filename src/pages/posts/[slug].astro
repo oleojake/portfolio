@@ -24,7 +24,9 @@ const { Content } = await post.render();
 	og_description={post.data.description}
 	og_type="article"
 >
-	<article class="prose mx-auto flex w-full max-w-2xl flex-col gap-4 text-lg">
+	<article
+		class="prose prose-p:my-2 prose-p:text-gray-800 mx-auto flex w-full max-w-2xl flex-col gap-4 text-lg"
+	>
 		<h1 class="mb-0">
 			{post.data.title}
 		</h1>
