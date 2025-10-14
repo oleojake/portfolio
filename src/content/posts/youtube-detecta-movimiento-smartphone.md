@@ -40,7 +40,7 @@ mostrar un anuncio justo cuando el usuario está mirando la pantalla multiplica 
 el <b>timing de atención</b> es un factor crucial en la economía de las plataformas digitales.</p>
 
 <h2 class="mt-5 mb-0">Acceso y permisos</h2>
-<p>Aquí es donde la teoría se vuelve interesante. Los sensores de movimiento no se consideran de “alto riesgo” como la cámara o el micrófono, por lo que <b>muchas apps pueden acceder a ellos sin pedir permiso explícito.</b></p>
+<p>Los sensores de movimiento no se consideran de “alto riesgo” como la cámara o el micrófono, por lo que <b>muchas apps pueden acceder a ellos sin pedir permiso explícito.</b></p>
 <p>En resumen: <b>sí, una app móvil puede leer estos datos</b> con relativa facilidad. No significa que YouTube lo haga, pero la base técnica existe.</p>
 
 <h3 class="mt-5 mb-0">Objeciones y necesidad de un patrón</h3>
