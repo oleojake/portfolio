@@ -1,6 +1,6 @@
 ---
 title: ¿YouTube detecta cuándo coges tu smartphone? Mi teoría (y demo con React Native)
-description: Una hipótesis técnica sobre cómo YouTube podría detectar cuándo miras la pantalla, y una demo práctica con React Native para explorar los sensores de movimiento.
+description: Una hipótesis sobre cómo YouTube podría detectar cuándo miras la pantalla, incluye demo práctica con React Native para testear los sensores de movimiento.
 publishedAt: 2025-10-14
 ---
 
@@ -9,13 +9,13 @@ publishedAt: 2025-10-14
 </figure>
 
 <p>Últimamente me he dado cuenta de un patrón curioso.<br>
-Escucho podcasts en YouTube durante horas mientras entreno o cocino, y los anuncios apenas aparecen. Pero en cuanto cojo el móvil… aparece uno casi de inmediato.</p>
+Escucho podcasts en YouTube durante horas mientras entreno o cocino, y los anuncios apenas aparecen. Pero en cuanto cojo el móvil… ¡Aparece uno casi de inmediato!</p>
 
-<p>Al principio pensé que era casualidad, pero empezó a repetirse tantas veces que acabó por despertar mi teoría:</p>
+<p>Al principio pensaba que era casualidad, pero empezó a repetirse tantas veces que acabó por despertar mi teoría:</p>
 
-<blockquote>¿Podría YouTube (o aplicaciones similares) detectar que estoy sujetando el teléfono mediante los sensores del dispositivo?</blockquote>
+<blockquote>¿Podría YouTube (o aplicaciones similares) detectar que estoy sujetando el teléfono mediante los sensores de mi móvil?</blockquote>
 
-<p>No he encontrado ninguna documentación oficial que lo confirme, pero el escenario es <b>técnicamente posible</b>. En este artículo analizo cómo podrían intervenir los sensores de movimiento y muestro una pequeña prueba práctica en React Native.</p>
+<p>No he encontrado ninguna documentación oficial que lo confirme, pero el escenario es <b>técnicamente posible</b>. En este artículo voy a analizar cómo podrían intervenir los sensores de movimiento y mostraré una pequeña demo con React Native.</p>
 
 <h2 class="mt-5 mb-0">Qué miden realmente los sensores de movimiento</h2>
 <p>Desde hace años nuestros smartphones incluyen sensores como el <b>acelerómetro y el giroscopio</b>, diseñados para registrar el movimiento físico del dispositivo.</p>
@@ -37,7 +37,7 @@ saltarse el anuncio, tocar la pantalla o mirar el contenido.</p>
 <p>Desde el punto de vista de optimización publicitaria, eso es oro: 
 mostrar un anuncio justo cuando el usuario está mirando la pantalla multiplica las probabilidades de <b>impacto y conversión</b>.</p>
 <p>Y aunque no existe evidencia pública de que YouTube lo haga, sí está claro que 
-el <b>timing de atención</b> es un factor crucial en la economía de las plataformas digitales.</p>
+el <b>timing de atención</b> es un factor crucial.</p>
 
 <h2 class="mt-5 mb-0">Acceso y permisos</h2>
 <p>Los sensores de movimiento no se consideran de “alto riesgo” como la cámara o el micrófono, por lo que <b>muchas apps pueden acceder a ellos sin pedir permiso explícito.</b></p>
@@ -45,22 +45,22 @@ el <b>timing de atención</b> es un factor crucial en la economía de las plataf
 
 <h3 class="mt-5 mb-0">Objeciones y necesidad de un patrón</h3>
 <p>Una hipótesis así plantea varias objeciones lógicas.<br/>La principal: <b>diferenciar un agarre real de un simple movimiento.</b></p>
-<p>El móvil puede moverse dentro del bolsillo o en una mochila. Si un sistema quisiera detectar “agarre”, debería filtrar todos esos casos. Un patrón de detección realista incluiría:</p>
+<p>El móvil puede moverse dentro del bolsillo o en una mochila. Si un sistema quisiera detectar “agarre”, debería filtrar todos esos casos. Un patrón de detección realista podría incluir:</p>
 <ol class="text-gray-800 m-0">
 <li>Pico de aceleración vertical (eje Z).</li>
 <li>Cambio repentino de orientación (giroscopio).</li>
 <li>Estabilización rápida en posición de lectura.</li>
 </ol>
-<p>Ese tipo de procesamiento sí permitiría deducir cuándo el dispositivo ha sido tomado en la mano.</p>
+<p>Ese tipo de procesamiento permitiría deducir cuándo el dispositivo ha sido tomado en la mano.</p>
 <p><b>Objeción técnica:</b> consumo energético</p>
 <blockquote>“Always make sure to disable sensors you don't need, especially when your activity is paused. Failing to do so can drain the battery in just a few hours. Note that the system will not disable sensors automatically when the screen turns off. - Android Developers”
 </blockquote>
 <p>Esto significa que si una app mantuviera los sensores activos en segundo plano para detectar movimiento, el consumo de batería sería muy alto.</p>
 <p>Este punto hace poco probable que una aplicación como YouTube mantenga los sensores activos de forma continua solo para detectar un gesto tan sutil.</p>
-<p>Por ahora, no hay ningún documento oficial que confirme este comportamiento. ¿Pero podemos replicarlo en la demo?</p>
+<p>Parece que esta objeción tiene mucho peso ¿Pero podemos replicarlo en una demo?</p>
 
 <h3 class="mt-5 mb-0">Demo práctica en React Native</h3>
-<p>Para entender la facilidad con la que se puede leer el movimiento del dispositivo, creé un ejemplo muy básico usando <b>Expo</b> y el paquete <a href="https://docs.expo.dev/versions/latest/sdk/accelerometer/">expo-sensors.</a></p>
+<p>Para entender la facilidad con la que se puede leer el movimiento del dispositivo, he creado un ejemplo muy básico usando <b>Expo</b> y el paquete <a href="https://docs.expo.dev/versions/latest/sdk/accelerometer/">expo-sensors.</a></p>
 
 ```js
 // En este fragmento se comprueba si alguno de los ejes del giroscopio supera un umbral.
@@ -97,13 +97,13 @@ export default function Index() {
   el movimiento de levantar el móvil sin falsos positivos al dejarlo sobre la mesa.
 </blockquote>
 
-<p>Al ejecutar este ejemplo, basta con levantar el teléfono para observar un <b>pico en el eje Z</b>. Esa simple lectura ya serviría como base para detectar un gesto de “agarre” si se procesara junto con más contexto.</p>
+<p>Al ejecutar este ejemplo, basta con levantar el teléfono e inclunar la pantalla para leerla para <b>observar algunos picos</b>. Esa simple lectura ya serviría como base para detectar un gesto de “agarre” si se procesara junto a más contexto.</p>
 
 <figure class="flex justify-center">
 <img class="m-0 max-w-56 rounded-md" src="/posts/youtube-detecta-movimiento-smartphone/sensor-test-app.gif" alt="sensor-test-app"/>
 </figure>
 
-<p>El código completo y los comentarios adicionales están disponibles al final de este artículo por si quieres jugar por tu cuenta con los sensores.</p>
+<p>Tienes el enlace al GitHub de este código al final de este artículo por si quieres jugar por tu cuenta con los sensores.</p>
 
 <h3 class="mt-5 mb-0">Conclusiones</h3>
 <p>La hipótesis de que YouTube utilice sensores de movimiento para decidir cuándo mostrar anuncios <b>no tiene confirmación oficial</b>.</p>
@@ -115,7 +115,6 @@ export default function Index() {
 <p>Y, por simple curiosidad:</p>
 <blockquote>¿A alguien más le pasa lo mismo o soy el único que ahora no puede dejar de fijarse en cuándo aparece el anuncio?
 </blockquote>
-<p>Haz click para descargar el código de la demo:</p>
 <figure class="flex justify-center">
 <a href="https://github.com/oleojake/sensor-test" target="_blank"><img class="m-0 rounded-md" src="/posts/youtube-detecta-movimiento-smartphone/sensor-test-github.jpg" alt="sensor-test-github"/></a>
 </figure>
