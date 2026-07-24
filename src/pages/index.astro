@@ -14,7 +14,7 @@ import { tools, titles } from "../config.ts";
 import { getCollection } from "astro:content";
 const posts = (await getCollection("posts")).sort(function (
 	first: any,
-	second: any
+	second: any,
 ) {
 	return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
 });
@@ -30,35 +30,45 @@ const posts = (await getCollection("posts")).sort(function (
 							Hi, I’m {Config.me.name.split(" ")[0]} Marzal
 						</h1>
 						<h2 class="w-auto sm:w-[85%] md:w-[90%] leading-6">
-							A <strong class="font-bold text-oleojake-secondary"
-								>{Config.me.job}</strong
-							> currently working in <strong class="font-bold text-oleojake-secondary"
-								>front-end</strong
-							> development. I also have a background in <strong
-								class="font-bold text-oleojake-secondary">e-commerce</strong
-							> and digital marketing.
+							<strong class="font-bold text-oleojake-secondary"
+								>Front-End Developer</strong
+							> specialized in <strong class="font-bold text-oleojake-secondary"
+								>React</strong
+							> and <strong class="font-bold text-oleojake-secondary"
+								>TypeScript</strong
+							>. My background in e-commerce and digital marketing gives me a
+							broader perspective when building user-focused products with
+							business goals in mind.
 						</h2>
-						<div class="custom-breadcrumbs">
-							<ul>
-								{
-									Object.keys(Config.socials).map((social) => (
-										<li>
-											<a
-												href={Config.socials[social as keyof typeof Config.socials]}
-												rel="noreferrer"
-												target="_blank"
-											>
-												{social.charAt(0).toUpperCase() + social.slice(1)}
-											</a>
-										</li>
-									))
-								}
-								<li>
-									<a href="/Pablo_Marzal_CV.pdf" download="Pablo_Marzal_CV.pdf">
-										Download CV</a
-									>
-								</li>
-							</ul>
+						<div class="flex flex-col gap-3">
+							<div class="custom-breadcrumbs">
+								<ul>
+									{
+										Object.keys(Config.socials).map((social) => (
+											<li>
+												<a
+													href={
+														Config.socials[
+															social as keyof typeof Config.socials
+														]
+													}
+													rel="noreferrer"
+													target="_blank"
+												>
+													{social.charAt(0).toUpperCase() + social.slice(1)}
+												</a>
+											</li>
+										))
+									}
+								</ul>
+							</div>
+							<a
+								href="/Pablo_Marzal_CV.pdf"
+								download="Pablo_Marzal_CV.pdf"
+								class="w-fit text-sm border border-oleojake-primary text-oleojake-primary px-4 py-1.5 rounded-md hover:bg-oleojake-primary hover:text-base-100 transition-all duration-300"
+							>
+								Resume
+							</a>
 						</div>
 					</div>
 					<div class="text-center mt-8 sm:ml-auto sm:m-0 sm:block">
@@ -94,11 +104,26 @@ const posts = (await getCollection("posts")).sort(function (
 						Object.keys(Config.projects).map((project) => (
 							<FloatingBox
 								title={project}
-								href={Config.projects[project as keyof typeof Config.projects].url}
-								tags={Config.projects[project as keyof typeof Config.projects].tags}
+								href={
+									Config.projects[project as keyof typeof Config.projects].url
+								}
+								tags={
+									Config.projects[project as keyof typeof Config.projects].tags
+								}
 							/>
 						))
 					}
+				</section>
+			</article>
+			<article class="flex flex-col gap-8">
+				<header class="flex w-full flex-row justify-between gap-2">
+					<h3 class="text-lg tracking-tighter font-semibold">📍 Journey</h3>
+				</header>
+				<section>
+					<TimeLine />
+				</section>
+				<section class="flex flex-col gap-8">
+					<CompaniesList />
 				</section>
 			</article>
 			<article class="flex flex-col gap-8">
@@ -111,18 +136,9 @@ const posts = (await getCollection("posts")).sort(function (
 			</article>
 			<article class="flex flex-col gap-8">
 				<header class="flex w-full flex-row justify-between gap-2">
-					<h3 class="text-lg tracking-tighter font-semibold">📍 My path</h3>
-				</header>
-				<section>
-					<TimeLine />
-				</section>
-				<section class="flex flex-col gap-8">
-					<CompaniesList />
-				</section>
-			</article>
-			<article class="flex flex-col gap-8">
-				<header class="flex w-full flex-row justify-between gap-2">
-					<h3 class="text-lg tracking-tighter font-semibold">🎓 Certificates</h3>
+					<h3 class="text-lg tracking-tighter font-semibold">
+						🎓 Certificates
+					</h3>
 				</header>
 				<section class="grid grid-cols-2 gap-4 sm:grid sm:grid-cols-4">
 					{
@@ -144,11 +160,11 @@ const posts = (await getCollection("posts")).sort(function (
 
 			<article class="flex flex-col gap-8">
 				<header class="flex w-full flex-row justify-between gap-2">
-					<h3 class="text-lg">Latest posts</h3>
+					<h3 class="text-lg">Latest Articles</h3>
 					<a
 						href="/posts"
 						class="text-sm underline decoration-dashed underline-offset-8 text-oleojake-secondary hover:text-oleojake-primary"
-						>See all posts
+						>See all articles
 					</a>
 				</header>
 				<section class="grid grid-cols-1 gap-4 sm:grid-cols-2 mx-auto">

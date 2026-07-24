@@ -18,7 +18,7 @@ interface IConfig {
 export const Config: IConfig = {
 	me: {
 		name: "Pablo Marzal Garrigós",
-		job: "multimedia engineer",
+		job: "Front-End Developer",
 		projectLink: "https://github.com/oleojake",
 	},
 	socials: {
@@ -93,11 +93,11 @@ interface Title {
 
 export const titles: Title[] = [
 	{
-		title: "Multimedia Engineering Degree",
+		title: "Bachelor's Degree in Multimedia Engineering",
 		src: "multimedia-engineering-degree",
 	},
-	{ title: "Master's Degree in front-end", src: "master-degree-frontend" },
-	{ title: "Master's Degree in E-commerce", src: "master-degree-ecommerce" },
+	{ title: "Master's in Frontend Development", src: "master-degree-frontend" },
+	{ title: "Master's in Ecommerce and Digital Marketing", src: "master-degree-ecommerce" },
 	{ title: "First Certificate in English", src: "first-certificate-english" },
 ];
 
@@ -108,6 +108,11 @@ interface Certifications {
 }
 
 export const certifications: Certifications[] = [
+	{
+		title: "Higher Technician in Web Applications Development",
+		school: "IES San Vicente",
+		year: "2025",
+	},
 	{
 		title: "Bootcamp JavaScript & TypeScript",
 		school: "Lemoncode",
@@ -162,15 +167,15 @@ export const jobs: Job[] = [
 		startYear: "2025",
 		endYear: "Present",
 		company: "Limenius",
-		jobPosition: "Front-End Developer",
+		jobPosition: "Frontend Developer",
 		description:
-			"As a Front-End Developer, I built modern web interfaces using React, working closely with the Symfony backend to integrate APIs and dynamic features. I focused on creating reusable components and enhancing the user experience across web and mobile applications.",
+			"Develop and maintain web and mobile applications using React, React Native and Symfony, implementing new features and improving existing applications with a focus on scalability and usability.",
 	},
 	{
 		startYear: "2024",
 		endYear: "2025",
 		company: "Quickmock",
-		jobPosition: "Front-End Developer",
+		jobPosition: "Frontend Developer",
 		description:
 			"As a Frontend Developer, I contributed to an open-source wireframing tool built with TypeScript, React, and Konvajs, enabling users to quickly create basic wireframes with interactive and scalable UI elements. I collaborated with cross-functional teams in an agile environment.",
 	},
@@ -178,25 +183,17 @@ export const jobs: Job[] = [
 		startYear: "2023",
 		endYear: "2024",
 		company: "Ecommaster.es School",
-		jobPosition: "Front-End Developer",
+		jobPosition: "Frontend Developer",
 		description:
-			"Focused on the creation and optimization of websites and landing pages primarily using HTML, CSS, and JavaScript, along with tools like Bootstrap, Git, and SASS. Collaborated on web development solutions to support marketing initiatives and achieve the school’s goals.",
-	},
-	{
-		startYear: "2017",
-		endYear: "2023",
-		company: "Ecommaster.es School",
-		jobPosition: "Digital Marketing & Head of Studies",
-		description:
-			"Digital Marketing tasks: Lead Generation, SEO, Facebook Ads, Content Creation, CRM, Invoicing, CRM Management, organization of online and in-person events among others. In addition, maintenance of the school's campus as well as the management of a community linked to digital marketing.",
+			"Developed corporate websites, landing pages and e-commerce platforms, building responsive interfaces aligned with business and marketing objectives.",
 	},
 	{
 		startYear: "2016",
 		endYear: "2024",
 		company: "Turronesydulces",
-		jobPosition: "Ecommerce Manager",
+		jobPosition: "Ecommerce & Digital Marketing Manager",
 		description:
-			"Management of an Ecommerce developed in Magento and the supervision of other sales channels like Amazon, WordPress or Shopify among others. SEO Strategies, Advertising Campaigns, Emailmarketing, Automations, CRM Management, Web Development, KPIS Analysis, Logistics Management, Social Networks, Customer Service and other tasks related to the daily maintenance of an online store.",
+			"Managed the day-to-day operations of an e-commerce business, combining digital marketing, logistics, customer support and online sales across Magento, Shopify, Amazon and WordPress.",
 	},
 	{
 		startYear: "2016",
@@ -204,6 +201,6 @@ export const jobs: Job[] = [
 		company: "Digital Latam",
 		jobPosition: "Frontend & Elearning Developer",
 		description:
-			"Development of e-learning platforms using HTML, CSS and JavaScript. Design of interactive videos using 2D animations",
+			"Developed front-end solutions for corporate e-learning projects, creating interactive interfaces and learning content using HTML, CSS and JavaScript.",
 	},
 ];

@@ -12,10 +12,10 @@ interface Props {
 }
 
 const {
-	title = "Pablo Marzal's portfolio",
-	description = "I am a multimedia engineer currently working in frontend development. I also have a background in e-commerce and digital marketing.",
-	og_title = "Pablo Marzal's portfolio",
-	og_description = "I am a multimedia engineer currently working in frontend development. I also have a background in e-commerce and digital marketing.",
+	title = "Pablo Marzal — Front-End Developer",
+	description = "Front-End Developer specializing in React and TypeScript, with 7 years of e-commerce and digital business experience. Based in Spain.",
+	og_title = "Pablo Marzal — Front-End Developer",
+	og_description = "Front-End Developer specializing in React and TypeScript, with 7 years of e-commerce and digital business experience.",
 	og_type = "website",
 } = Astro.props;
 
@@ -33,7 +33,7 @@ const currentPath = Astro.url.pathname;
 		<meta property="og:title" content={og_title} />
 		<meta property="og:description" content={og_description} />
 		<meta property="og:type" content={og_type} />
-		<meta property="og:image" content="/public/profile-picture.jpg" />
+		<meta property="og:image" content="/profile-picture.webp" />
 		<meta property="og:url" content={Astro.request.url} />
 		<ViewTransitions />
 	</head>
@@ -48,13 +48,16 @@ const currentPath = Astro.url.pathname;
 				<nav class="text-sm custom-breadcrumbs">
 					<ul>
 						<li>
-							<a class={currentPath === "/" ? "text-oleojake-primary" : ""} href="/"
-								>Home</a
+							<a
+								class={currentPath === "/" ? "text-oleojake-primary" : ""}
+								href="/">Home</a
 							>
 						</li>
 						<li>
 							<a
-								class={currentPath.startsWith("/posts") ? "text-oleojake-primary" : ""}
+								class={currentPath.startsWith("/posts")
+									? "text-oleojake-primary"
+									: ""}
 								href="/posts">Posts</a
 							>
 						</li>

@@ -46,15 +46,14 @@ const { title, publishedAt, description, href, tags } = Astro.props;
 			</svg>
 		</div>
 	</div>
+	{description && <p class="text-sm text-base-content/60 line-clamp-2">{description}</p>}
 	{
-		tags ? (
+		tags && (
 			<div class="pt-1 flex flex-row flex-wrap gap-2">
 				{tags.map((item) => (
 					<div class="badge badge-success">{item}</div>
 				))}
 			</div>
-		) : (
-			<p class="truncate">{description}</p>
 		)
 	}
 </a>
